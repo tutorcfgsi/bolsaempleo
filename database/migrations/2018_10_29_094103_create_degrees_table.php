@@ -19,22 +19,22 @@ class CreateDegreesTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'ESO',
         ]);
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'Bachillerato',
         ]);
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'FP Basica',
         ]);
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'Ciclo Formativo',
         ]);
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'Carrera',
         ]);
-        DB::table('titulos')->insert([
+        DB::table('degrees')->insert([
             'nombre'=> 'Master',
         ]);
     }

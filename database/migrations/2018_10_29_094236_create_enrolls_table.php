@@ -19,7 +19,7 @@ class CreateEnrollsTable extends Migration
             $table->unsignedInteger('id_oferta');
             $table->tinyInteger('seleccionado')->default(0);
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_oferta')->references('id')->on('ofertas')->onDelete('cascade');
+            $table->foreign('id_oferta')->references('id')->on('offers')->onDelete('cascade');
             $table->timestamps();
         });
     }

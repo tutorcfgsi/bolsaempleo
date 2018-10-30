@@ -19,31 +19,31 @@ class CreateSectorsTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Automoción y transporte',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Químico, farmacéutico y sanitario',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Textil, calzado y confección',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Construcción',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Alimentación y restauración',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Siderurgia, metalurgia, fabricación y comercialización de maquinaria',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Servicios a empresas',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Papel, cartón, artes gráficas, edición',
         ]);
-        DB::table('sectores')->insert([
+        DB::table('sectors')->insert([
             'nombre'=> 'Servicios recreativos, culturales, ocio',
         ]);
     }
