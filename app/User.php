@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'second_name', 'provincia', 'localidad', 'direccion', 'telefono', 'fecha_nac', 'dni', 'vehiculo', 'foto', 'email', 'password', 'confirmation_code',
     ];
 
     /**
@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function pathAttachment(){
+        return "/BolsaEmpleo/storage/app/user/" . $this->foto;
+    }
 }
