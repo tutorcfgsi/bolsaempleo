@@ -2,11 +2,11 @@
 
 @section('content')
     <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Bolsa de Empleo</h1>
-            </div>
-            <!-- /.col-lg-12 -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Bolsa de Empleo</h1>
+        </div>
+        <!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
         <div class="row">
@@ -99,23 +99,41 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
+
         <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div id="morris-area-chart"></div>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
+            <div class="marco col-lg-10">
+                <table id="myTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th class="text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($users as $user)
+                        <tr>
+                            <td>{{ $user->name }} {{ $user->second_name }}</td>
+                            <td class="text-center">{{ $user->telefono }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td class="text-right"> 
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /#page-wrapper -->
+@endsection
+
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                'order': [[0,'desc']]
+            });
+        });
+    </script>
 @endsection

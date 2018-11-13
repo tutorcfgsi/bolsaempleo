@@ -220,7 +220,7 @@
                                 </li>
                                 <li>
                                     <a href="flot.html">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>fa-reply
                                         Eliminar Oferta
                                     </a>
                                 </li>
@@ -258,13 +258,19 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-wrench"></i> ADMINISTRACIÓN<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="blank.html">Blank Page</a>
+                                    <a href="blank.html">
+                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                        Importar Alumnos
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="login.html">Login Page</a>
+                                    <a href="login.html">
+                                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                                        Importar Empresas
+                                    </a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
