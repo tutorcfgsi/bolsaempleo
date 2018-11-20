@@ -106,7 +106,7 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Teléfono</th>
+                            <th class="text-center">Teléfono</th>
                             <th>Email</th>
                             <th class="text-center"></th>
                         </tr>
@@ -115,7 +115,7 @@
                         @foreach($users as $user)
                         <tr>
                             <td>{{ $user->name }} {{ $user->second_name }}</td>
-                            <td class="text-center">{{ $user->telefono }}</td>
+                            <td class="text-center">{{ $user->mobile }}</td>
                             <td>{{ $user->email }}</td>
                             <td class="text-right"> 
                             </td>

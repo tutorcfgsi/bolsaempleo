@@ -17,19 +17,21 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('second_name');
-            $table->string('provincia');
-            $table->string('localidad');
-            $table->string('direccion');
-            $table->string('telefono');
-            $table->date('fecha_nac');
-            $table->string('email')->unique();
+            $table->string('province')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
+            $table->string('mobile')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->string('email');
             $table->string('password');
-            $table->string('dni');
-            $table->tinyInteger('vehiculo')->default(0);
-            $table->tinyInteger('tipo')->default(0);
-            $table->string('foto')->default('defecto.png');
+            $table->string('dni')->nullable();
+            $table->tinyInteger('vehicle')->default(0);
+            $table->tinyInteger('type')->default(0);
+            $table->string('photo')->default('defecto.png');
             $table->tinyInteger('confirmed')->default(0);
             $table->string('confirmation_code')->nullable();
+            $table->string('current_state')->nullable();
+            $table->string('observation')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -37,35 +39,39 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert([
             'name'=> 'admin',
             'second_name'=> 'admin',
-            'provincia'=> 'cadiz',
-            'localidad'=> 'cadiz',
-            'direccion'=> 'cadiz',
-            'telefono'=> '123456789',
-            'fecha_nac'=> '1995-02-03',
+            'province'=> 'cadiz',
+            'city'=> 'cadiz',
+            'address'=> 'cadiz',
+            'mobile'=> '123456789',
+            'birthdate'=> '1995-02-03',
             'email'=> 'admin@admin.com',
             'password'=> bcrypt('123456'),
             'dni'=> '12345678A',
-            'vehiculo'=> 0,
-            'foto'=>'admin.png',
-            'tipo'=>1,
+            'vehicle'=> 0,
+            'type'=>1,
+            'photo'=>'admin.png',
             'confirmed'=>1,
+            'confirmation_code'=>"",
+            'current_state'=>"En paro"
         ]);
 
         DB::table('users')->insert([
             'name'=> 'prueba',
             'second_name'=> 'prueba',
-            'provincia'=> 'cadiz',
-            'localidad'=> 'cadiz',
-            'direccion'=> 'cadiz',
-            'telefono'=> '123456789',
-            'fecha_nac'=> '1995-02-03',
+            'province'=> 'cadiz',
+            'city'=> 'cadiz',
+            'address'=> 'cadiz',
+            'mobile'=> '123456789',
+            'birthdate'=> '1995-02-03',
             'email'=> 'prueba@prueba.com',
             'password'=> bcrypt('123456'),
             'dni'=> '12345678A',
-            'vehiculo'=> 0,
-            'foto'=>'admin.png',
-            'tipo'=>1,
+            'vehicle'=> 0,
+            'type'=>1,
+            'photo'=>'admin.png',
             'confirmed'=>1,
+            'confirmation_code'=>"",
+            'current_state'=>"En paro"
         ]);
     }
 

@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $desactivados = User::where('activado', 0)->count();
+        $desactivados = User::where('confirmed', 0)->count();
 
         return view('dashboard', compact('desactivados'));
     }

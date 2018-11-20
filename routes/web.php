@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/users', 'Users\UsersController@index')->name('users');
+Route::get('admin/impUsers', 'Admin\AdminController@importUsers')->name('importUsers');

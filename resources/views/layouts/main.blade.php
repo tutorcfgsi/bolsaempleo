@@ -261,7 +261,7 @@
                             <a href="#"><i class="fa fa-wrench"></i> ADMINISTRACIÓN<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="blank.html">
+                                    <a href="{{ route('importUsers') }}">
                                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                         Importar Alumnos
                                     </a>
